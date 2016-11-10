@@ -1,0 +1,48 @@
+{
+  "name": "menna",
+  "version": "1.0.0",
+  "description": "Wrapper for Winston and Papertrail logging",
+  "main": "lib/menna",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --compilers js:babel-register",
+    "test:watch": "mocha --compilers js:babel-register -w",
+    "lint": "eslint lib test",
+    "posttest": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VelocityMobile/menna.git"
+  },
+  "keywords": [
+    "logging",
+    "tools",
+    "winston",
+    "papertrail"
+  ],
+  "author": {
+    "url": "https://velocityapp.com/"
+  },
+  "engines": {
+    "node": ">= 6.9.1"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VelocityMobile/menna/issues"
+  },
+  "homepage": "https://github.com/VelocityMobile/menna#readme",
+  "dependencies": {
+    "winston": "^2.3.0",
+    "winston-papertrail": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babel-register": "^6.18.0",
+    "eslint": "^3.9.1",
+    "mocha": "^3.1.2",
+    "sinon": "^1.17.6"
+  }
+}
