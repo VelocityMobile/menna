@@ -1,0 +1,15 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "semi": ["error", "never"]
+  },
+  "env": {
+    "node": true
+  },
+  "globals": {
+    "describe": true,
+    "before": true,
+    "it": true,
+    "after": true
+  }
+}
