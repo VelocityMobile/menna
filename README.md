@@ -1,5 +1,7 @@
 # menna
 
+[![CircleCI](https://circleci.com/gh/VelocityMobile/menna/tree/master.svg?style=shield)](https://circleci.com/gh/VelocityMobile/menna/tree/master)
+
 This library uses [winston](https://www.npmjs.com/package/winston) as logger, and streams to [Papertail](https://papertrailapp.com/) via [winston-papertrail](https://www.npmjs.com/package/winston-papertrail) package.
 
 ## Installation & testing
