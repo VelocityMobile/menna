@@ -10,7 +10,8 @@
   "scripts": {
     "test": "mocha --compilers js:babel-register",
     "test:watch": "mocha --compilers js:babel-register -w",
-    "lint": "eslint lib test"
+    "lint": "eslint lib test",
+    "posttest": "npm run lint"
   },
   "repository": {
     "type": "git",
