@@ -6,14 +6,14 @@ This library uses [winston](https://www.npmjs.com/package/winston) as logger, an
 
 ```sh
 npm install
-npm run test
+npm test
 ```
 
 ## Usage
 
 The logger functions are the same as Winston's. The settings can be configured with environment variables, see `lib/menna.js` for details.
 
-```sh
+```javascript
 import log from 'menna';
 
 log.info('ʘ‿ʘ');
