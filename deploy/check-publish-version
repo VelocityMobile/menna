@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# This script confirms that the version we have now doesn't already exist in npm
+
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+CYAN='\033[0;36m'
+NC='\033[0m'
+
+# Version key/value should be on its own line
+PACKAGE_VERSION=$(cat package.json \
+  | grep version \
+  | head -1 \
+  | awk -F: '{ print $2 }' \
+  | sed 's/[",]//g' \
+  | tr -d '[[:space:]]')
+
+PACKAGE_NAME=$(cat package.json \
+  | grep name \
+  | head -1 \
+  | awk -F: '{ print $2 }' \
+  | sed 's/[",]//g' \
+  | tr -d '[[:space:]]')
+
+PACKAGE_MANIFEST=`npm view $PACKAGE_NAME@$PACKAGE_VERSION`
+
+echo -e "${CYAN}Name:${NC}"
+echo $PACKAGE_NAME
+
+echo -e "${CYAN}Version:${NC}"
+echo $PACKAGE_VERSION
+
+echo -e "${CYAN}Manifest:${NC}"
+echo $PACKAGE_MANIFEST
+
+if [[ $PACKAGE_MANIFEST == "undefined" || -z $PACKAGE_MANIFEST ]];
+then
+    echo -e "${GREEN}Great! 👍  npm package $PACKAGE_NAME@$PACKAGE_VERSION does not exist yet...${NC}"
+else
+    echo -e "${RED}Boo! 👻  $PACKAGE_NAME@$PACKAGE_VERSION already exists in npm..."
+    echo -e "See https://www.npmjs.com/package/$PACKAGE_NAME for details${NC}"
+    exit 1
+fi
