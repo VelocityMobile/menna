@@ -1,8 +1,9 @@
 {
   "name": "menna",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Wrapper for Winston and Papertrail logging",
   "main": "lib/menna",
+  "typings": "lib/menna.d.ts",
   "directories": {
     "lib": "lib",
     "test": "test"
@@ -39,6 +40,7 @@
     "winston-papertrail": "^1.0.3"
   },
   "devDependencies": {
+    "@types/winston": "^2.3.9",
     "babel-cli": "^6.18.0",
     "babel-preset-latest": "^6.16.0",
     "babel-register": "^6.18.0",
