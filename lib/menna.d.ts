@@ -1,5 +1,8 @@
-declare module 'menna' {
-  import * as winston from 'winston'
-  const menna: winston.LoggerInstance
-  export default menna
+import * as winston from 'winston'
+
+declare namespace menna {
+  interface Logger extends winston.LoggerInstance {}
 }
+
+declare const menna: menna.Logger;
+export = menna;
