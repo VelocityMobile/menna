@@ -1,6 +1,6 @@
 {
   "name": "menna",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Wrapper for Winston and Papertrail logging",
   "main": "lib/menna",
   "typings": "lib/menna.d.ts",
@@ -25,7 +25,8 @@
     "papertrail"
   ],
   "author": {
-    "url": "https://velocityapp.com/"
+    "name": "Velocity Black Engineering",
+    "url": "https://velocity.black"
   },
   "engines": {
     "node": ">= 6.9.1"
@@ -36,18 +37,18 @@
   },
   "homepage": "https://github.com/VelocityMobile/menna#readme",
   "dependencies": {
-    "winston": "^2.3.0",
+    "@types/winston": "^2.3.9",
+    "winston": "^3.0.0",
     "winston-papertrail": "^1.0.3"
   },
   "devDependencies": {
-    "@types/winston": "^2.3.9",
     "babel-cli": "^6.18.0",
     "babel-preset-latest": "^6.16.0",
     "babel-register": "^6.18.0",
-    "eslint": "^3.9.1",
-    "eslint-config-airbnb-base": "^10.0.1",
+    "eslint": "^5.0.1",
+    "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.2.0",
-    "mocha": "^3.1.2",
-    "sinon": "^1.17.6"
+    "mocha": "^5.2.0",
+    "sinon": "^6.1.0"
   }
 }

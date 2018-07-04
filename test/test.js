@@ -1,4 +1,4 @@
-/* eslint-env node*/
+/* eslint-env node */
 
 import assert from 'assert'
 import sinon from 'sinon'
