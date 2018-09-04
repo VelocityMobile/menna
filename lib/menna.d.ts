@@ -1,10 +1,7 @@
-import { Logger as LoggerInstance } from 'winston'
-
-declare module 'winston' {
-}
+import * as winston from 'winston'
 
 declare namespace menna {
-  interface Logger extends LoggerInstance {}
+  interface Logger extends winston.LoggerInstance {}
 }
 
 declare const menna: menna.Logger;

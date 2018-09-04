@@ -1,6 +1,6 @@
 {
   "name": "menna",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Wrapper for Winston and Papertrail logging",
   "main": "lib/menna",
   "typings": "lib/menna.d.ts",
@@ -37,8 +37,9 @@
   },
   "homepage": "https://github.com/VelocityMobile/menna#readme",
   "dependencies": {
-    "winston": "^3.0.0",
-    "winston-papertrail": "^1.0.3"
+    "@types/winston": "^2.4.4",
+    "winston": "^2.4.4",
+    "winston-papertrail": "^1.0.5"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
