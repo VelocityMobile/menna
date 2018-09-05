@@ -1,6 +1,6 @@
 {
   "name": "menna",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Wrapper for Winston and Papertrail logging",
   "main": "lib/menna",
   "typings": "lib/menna.d.ts",
